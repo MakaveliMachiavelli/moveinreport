@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Move-In / Move-Out Inspection Report Maker — Free, Photos Stay on Your Device — MoveInReport</title>
+<link rel="manifest" href="manifest.json">
 <meta name="description" content="Create a professional move-in / move-out condition report with photos in minutes. Free, works offline, photos never leave your device. Print or save as PDF. Landlords & property managers — no subscription.">
 <meta property="og:title" content="MoveInReport — Photo Inspection Report Maker">
 <meta property="og:description" content="Free move-in/move-out photo inspection report: photos compressed in-browser, never uploaded. Privacy-first. PRO $12.99 unlimited reports.">
@@ -209,5 +210,11 @@
 </div>
 
 <script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "name": "MoveInReport",
+  "short_name": "moveinreport",
+  "description": "Move-in/move-out inspection reports with photos.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#067a53",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='#067a53'/><text x='32' y='44' font-size='34' text-anchor='middle' fill='%23fff' font-family='Arial' font-weight='bold'>M</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
