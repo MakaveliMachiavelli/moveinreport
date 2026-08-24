@@ -3,7 +3,7 @@
 'use strict';
 
 /* PRO unlock codes. OWNER: change before promoting (see PAYMENTS.md). */
-const PRO_CODES = ['MOVEIN-PRO-1299', 'MIR-DEMO'];
+const PRO_CODES = ['MIR-PRO-1299-67E9-2B2C', 'MIR-PRO-1299-DEMO-BC3B-7415'];
 const LS = { draft: 'mir_draft', pro: 'mir_pro', saved: 'mir_saved' };
 
 const CONDITIONS = ['Good', 'Fair', 'Needs repair'];
