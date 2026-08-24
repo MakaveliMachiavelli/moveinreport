@@ -127,7 +127,162 @@
         <p style="color:var(--p-muted);">Forensic-grade documentation · <a href="https://makavelimachiavelli.github.io/zinvent-hub/">Zinvent</a></p>
       </div>
     </section>
-  </main>
+  
+  <section id="z-app" class="z-section" hidden>
+    <div class="z-wrap" id="z-app-root">
+
+  >
+
+<header class="site-header">
+  <div class="brand">Move<span>In</span>Report</div>
+  <nav>
+    <span id="proBadge" class="badge hidden">PRO</span>
+    <a href="#faq">FAQ</a>
+    <button id="proBtn" class="btn-link">Get PRO — $12.99</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Move-in &amp; move-out reports that hold up in a dispute</h1>
+    <p class="sub">Photos, condition ratings and signatures — assembled into a clean PDF-ready report in minutes. <strong>Photos never leave your device</strong> (no upload, no account). Free. Inspection apps charge $12/month; this is yours once.</p>
+    <div class="hero-chips">
+      <span>✓ 100% offline &amp; private</span>
+      <span>✓ Photos embedded</span>
+      <span>✓ Signature lines</span>
+      <span>✓ Print / save PDF</span>
+    </div>
+  </section>
+
+  <div class="app-grid">
+    <section class="panel">
+      <h2>1. Inspection details</h2>
+      <div class="fields three">
+        <label>Inspection type
+          <select id="insType">
+            <option>Move-in</option><option>Move-out</option><option>Periodic</option>
+          </select>
+        </label>
+        <label>Date <input id="insDate" type="date"></label>
+        <label>Property / address <input id="insAddr" placeholder="Unit 2A, Maple Apartments, 12 Maple St."></label>
+      </div>
+      <div class="fields three" style="margin-top:.6rem">
+        <label>Landlord / manager <input id="landlord" placeholder="Maple Rentals LLC"></label>
+        <label>Tenant(s) <input id="tenant" placeholder="J. Santos"></label>
+        <label>Unit <input id="unit" placeholder="2A"></label>
+      </div>
+
+      <div class="items-head">
+        <h2>2. Areas &amp; rooms</h2>
+        <div>
+          <button id="tplBtn" class="btn-tiny hidden">📋 Standard template (PRO)</button>
+          <button id="addArea" class="btn-small">+ Add area</button>
+        </div>
+      </div>
+      <div id="areas"></div>
+
+      <div class="actions">
+        <button id="printBtn" class="btn primary">🖨️ Print / Save as PDF</button>
+        <button id="newBtn" class="btn">✨ New report</button>
+        <button id="savedBtn" class="btn hidden">📁 Saved reports (PRO)</button>
+      </div>
+      <p class="hint">Your draft auto-saves in this browser. Photos are compressed and stored locally only.</p>
+    </section>
+
+    <section class="panel">
+      <h2 class="preview-title">Live report preview</h2>
+      <div id="doc" class="report-doc">
+        <div class="rd-head">
+          <div>
+            <div class="rd-title" id="p_type">MOVE-IN</div>
+            <div class="rd-sub">CONDITION INSPECTION REPORT</div>
+          </div>
+          <div class="rd-meta">
+            <div id="p_date">—</div>
+            <div id="p_unit">—</div>
+          </div>
+        </div>
+        <div class="rd-info">
+          <div><b>Property:</b> <span id="p_addr">—</span></div>
+          <div><b>Landlord/manager:</b> <span id="p_ll">—</span></div>
+          <div><b>Tenant(s):</b> <span id="p_tn">—</span></div>
+        </div>
+        <div id="p_areas"></div>
+        <div class="rd-sign">
+          <div class="sig">Landlord/Manager: ______________ Date: ________</div>
+          <div class="sig">Tenant: ______________ Date: ________</div>
+        </div>
+        <div class="rd-foot" id="p_foot">Made with MoveInReport — free inspection report maker</div>
+      </div>
+    </section>
+  </div>
+
+  <section class="marketing">
+    <h2>Why landlords document condition</h2>
+    <div class="cards">
+      <div class="card"><h3>⚖️ Disputes end here</h3><p>Security-deposit fights are won with timestamped photos and both signatures. A report both parties signed at move-in is the single strongest document you can hold at move-out.</p></div>
+      <div class="card"><h3>🔒 Private by design</h3><p>Inspection apps upload your unit photos to their cloud. This tool has no server — photos load from your device, embed into the report, and stay on your device.</p></div>
+      <div class="card"><h3>🖨️ PDF-ready</h3><p>Print to PDF from any browser — email it to the tenant, keep a copy in your files, attach it to the lease.</p></div>
+    </div>
+
+    <h2 id="faq">FAQ</h2>
+    <div class="faq-item"><h3>How many photos can I add?</h3><p>As many as you like per area (they're compressed to keep the report light). Typical move-in reports run 20–60 photos across all areas.</p></div>
+    <div class="faq-item"><h3>Does it work on my phone?</h3><p>Yes — open the page, tap to add photos straight from your camera roll, then print/share the PDF. Works offline once loaded.</p></div>
+    <div class="faq-item"><h3>Is a signed report legally binding?</h3><p>A signed condition report is strong evidence in deposit disputes in most jurisdictions (some states require itemized documentation). This tool produces the document — check your local deposit law for specifics.</p></div>
+
+    <div class="cta-box">
+      <h2>MoveInReport PRO — $12.99 one-time</h2>
+      <ul>
+        <li>📁 <strong>Saved reports</strong> — keep one per unit, reopen any time</li>
+        <li>📋 <strong>Area templates</strong> — standard apartment checklist in one click</li>
+        <li>🏷️ <strong>Your company name</strong> on every report, no footer credit</li>
+      </ul>
+      <p class="once">One-time. Inspection apps bill this monthly.</p>
+      <button id="proBtn2" class="btn primary big">Unlock PRO — $12.99</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>MoveInReport — free move-in/move-out inspection report maker. Check local deposit laws; this tool produces documentation, not legal advice.</p>
+</footer>
+
+<!-- PAY MODAL -->
+<div id="payModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="payClose">✕</button>
+    <h2>Unlock MoveInReport PRO</h2>
+    <p class="price">$12.99 <span>one-time · lifetime · no subscription</span></p>
+    <div class="qr-box">
+      <a id="payLink" href="#" class="pay-alt">💳 Pay by card →</a>
+      <img src="pay-qr.svg" alt="Payment QR (replace with merchant QR)" width="180" height="180">
+    </div>
+    <ol class="pay-steps">
+      <li>Pay $12.99 (card link or QR).</li>
+      <li>Enter the unlock code you receive.</li>
+    </ol>
+    <div class="code-row">
+      <input id="codeInput" placeholder="Enter unlock code">
+      <button id="codeBtn" class="btn primary">Unlock</button>
+    </div>
+    <p class="code-msg" id="codeMsg"></p>
+  </div>
+</div>
+
+<!-- SAVED REPORTS MODAL -->
+<div id="savedModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="savedClose">✕</button>
+    <h2>📁 Saved reports</h2>
+    <ul id="savedList" class="saved-list"></ul>
+  </div>
+</div>
+
+
+
+    </div>
+  </section>
+</main>
   <footer class="z-footer" role="contentinfo">
     <div class="z-wrap">
       <p>&copy; 2025 MoveInReport · <a href="https://makavelimachiavelli.github.io/zinvent-hub/privacy.html">Privacy</a> · <a href="https://makavelimachiavelli.github.io/zinvent-hub/terms.html">Terms</a></p>
@@ -139,5 +294,19 @@
     </div>
   </footer>
   <script src="app.js"></script>
+
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-action]');
+    if(!btn) return;
+    var act = btn.getAttribute('data-action');
+    if(act && act.indexOf('new-')===0 || act==='start'){
+      var app = document.getElementById('z-app');
+      if(app){ app.hidden = false; app.scrollIntoView({behavior:'smooth'}); }
+    }
+  });
+})();
+</script>
 </body>
 </html>
